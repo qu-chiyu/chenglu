@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨露诗集</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{
+    width:100%;
+    min-height:100vh;
+    font-family:'Microsoft YaHei',sans-serif;
+    background:#fff;
+    color:#333;
+    line-height:1.6;
+  }
+  .bg{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url(1.png) center center / cover no-repeat;
+    z-index:-1;
+    opacity:0;
+    animation:fadeIn 1.5s ease forwards;
+  }
+  @keyframes fadeIn{to{opacity:1}}
+  .container{
+    max-width:900px;
+    margin:0 auto;
+    padding:60px 20px;
+  }
+  .title{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:30px;
+    color:#2c3e50;
+    letter-spacing:4px;
+  }
+  .btn-group{
+    display:flex;
+    gap:12px;
+    justify-content:center;
+    margin-bottom:40px;
+    flex-wrap:wrap;
+    opacity:1;
+  }
+  .poem-btn{
+    width:46px;
+    height:46px;
+    background:#a6e4b6;
+    color:#333;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+  }
+  .poem-btn:hover,
+  .poem-btn.active{
+    background:#ffd59a;
+  }
+  .poem-item{
+    background:rgba(255,255,255,0.92);
+    border-radius:12px;
+    padding:30px;
+    margin-bottom:30px;
+    display:none;
+  }
+  .poem-item.active{
+    display:block;
+  }
+  .poem-title{
+    font-size:24px;
+    color:#2980b9;
+    margin-bottom:10px;
+  }
+  .poem-author{
+    color:#7f8c8d;
+    font-size:15px;
+    margin-bottom:15px;
+  }
+  .poem-content{
+    font-size:16px;
+    white-space:pre-line;
+    line-height:1.8;
+  }
+  @media(max-width:768px){
+    .title{font-size:28px;}
+    .poem-btn{width:42px;height:42px;font-size:14px;}
+    .poem-item{padding:20px;}
+  }
+</style>
+</head>
+<body>
+<div class="bg" id="bg"></div>
+<div class="container">
+  <h1 class="title">晨露诗集</h1>
+  <h2 class="title">晨露小队</h2>
+  <h3 class="title">晨露作为这本诗集的名字，是因为要我们小队的人能和晨间的露水一样默默奉献</h3>
+  <div class="btn-group" id="btns">
+    <button class="poem-btn active" data-target="poem1">1</button>
+    <button class="poem-btn" data-target="poem2">2</button>
+    <button class="poem-btn" data-target="poem3">3</button>
+    <button class="poem-btn" data-target="poem4">4</button>
+    <button class="poem-btn" data-target="poem5">5</button>
+    <button class="poem-btn" data-target="poem6">6</button>
+    <button class="poem-btn" data-target="poem7">7</button>
+    <button class="poem-btn" data-target="poem8">8</button>
+    <button class="poem-btn" data-target="poem9">9</button>
+    <button class="poem-btn" data-target="poem10">10</button>
+    <button class="poem-btn" data-target="poem11">11</button>
+    <button class="poem-btn" data-target="poem12">12</button>
+    <button class="poem-btn" data-target="poem13">13</button>
+    <button class="poem-btn" data-target="poem14">14</button>
+    <button class="poem-btn" data-target="poem15">15</button>
+    <button class="poem-btn" data-target="poem16">16</button>
+    <button class="poem-btn" data-target="poem17">17</button>
+    <button class="poem-btn" data-target="poem18">18</button>
+    <button class="poem-btn" data-target="poem19">19</button>
+    <button class="poem-btn" data-target="poem20">20</button>
+    <button class="poem-btn" data-target="poem21">21</button>
+    <button class="poem-btn" data-target="poem22">22</button>
+    <button class="poem-btn" data-target="poem23">23</button>
+    <button class="poem-btn" data-target="poem24">24</button>
+    <button class="poem-btn" data-target="poem25">25</button>
+    <button class="poem-btn" data-target="poem26">26</button>
+  </div>
+
+  <div class="poem-item active" id="poem1">
+    <div class="poem-title">一代人</div>
+    <div class="poem-author">顾城</div>
+    <div class="poem-content">
+黑夜给了我黑色的眼睛，
+我却用它寻找光明。
+纵使你虐我千百遍，
+我依然待你如初恋。
+土地是弯曲的
+土地是弯曲的
+我只能远远的看见你
+心上的蓝天蓝吗？
+真蓝。
+那蓝色是谎言
+我想使世界感到愉快
+微笑却凝固在嘴边
+还是给我一朵云吧
+他最晴朗的时间
+我的眼睛需要泪水
+我的太阳需要安眠。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem2">
+    <div class="poem-title">乡愁</div>
+    <div class="poem-author">余光中</div>
+    <div class="poem-content">
+小时候，
+乡愁是一枚小小的邮票，
+我在这头，母亲在那头，
+长大后
+乡愁是一张窄窄的船票，
+我在这头，新娘在那头，
+后来啊
+乡愁是一方矮矮的坟墓
+我在外头，母亲在里头。
+而现在，
+乡愁是一湾浅浅的海峡，
+我在这头，大陆在那头。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem3">
+    <div class="poem-title">春雨</div>
+    <div class="poem-author">盛林芸</div>
+    <div class="poem-content">
+春雨像个美丽的姑娘，
+跳着舞从天上落下，
+沁透世间万物，
+也沁进了我的心里。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem4">
+    <div class="poem-title">树</div>
+    <div class="poem-author">艾青</div>
+    <div class="poem-content">
+一棵树，一棵树，
+彼此孤独的兀立着，
+风与空气，
+告诉着他们的距离，
+但在泥土的覆盖下，
+它们的根伸长着，
+在看不见的深处，
+他们和根深深的纠缠在一起。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem5">
+    <div class="poem-title">我爱这土地</div>
+    <div class="poem-author">艾青</div>
+    <div class="poem-content">
+假如我是一只鸟，
+我也应该用嘶哑的喉咙歌唱:
+这被暴风雨所击打着的土地，
+这永远汹涌着我们的悲愤的河流，
+这无止息的吹刮着激烈的风，
+和那来自林间无比温柔的黎明......
+——然后我死了，
+连羽毛也腐烂在土地里。
+
+为什么我的眼里常含泪水？
+因为我对这土地爱的深沉......
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem6">
+    <div class="poem-title">窗前的树</div>
+    <div class="poem-author">金波</div>
+    <div class="poem-content">
+    我家窗前有棵树，
+    树上有只小鸟住。
+    每天天一亮，
+    小鸟就唱歌，
+    催我早早起，
+    上学不迟到。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem7">
+    <div class="poem-title">父亲</div>
+    <div class="poem-author">郭芷源</div>
+    <div class="poem-content">
+    父亲，
+       你那宽大的双肩
+         为我挡住了风雨，
+         为我遮住了成长的烦恼。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem8">
+    <div class="poem-title">夜</div>
+    <div class="poem-content">
+    夜深了，
+      路灯灭了，
+    灭了繁华的街道
+      打开了一个个梦。
+    
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem9">
+    <div class="poem-title">雾</div>
+    <div class="poem-author">无名</div>
+    <div class="poem-content">
+    藏住了太阳
+    藏住了楼房
+    藏住了山峰
+    藏住了笑脸。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem10">
+    <div class="poem-title">断章</div>
+    <div class="poem-author">卞之琳</div>
+    <div class="poem-content">
+    你站在桥上看风景，
+    人在楼上看你。
+    明月装饰了你的窗子，
+    你装饰了别人的梦。
+    
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem11">
+    <div class="poem-title">莲的心事</div>
+    <div class="poem-author">席慕蓉</div>
+    <div class="poem-content">
+    我是一朵盛开的夏荷，
+    多希望你能看见现在的我。
+    
+    风霜还不曾来侵蚀，
+    秋霜也未滴落，
+    青涩的季节已离我远去，
+    我已亭亭不忧  也不惧。
+    
+    现在正是，
+    我最美丽的时候，
+    重门却已深锁，
+    在芬芳的笑靥中，
+    谁人知我莲的心事？
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem12">
+    <div class="poem-title">太阳从西边出来了</div>
+    <div class="poem-author">盛林芸</div>
+    <div class="poem-content">
+    太阳从西边出来了
+    溪水逆着田埂往高处爬
+    苹果往天上飞了
+    带着香撞进云里
+    公鸡下蛋了
+    母鸡打鸣了
+    就连我都主动摊开练习本
+    把作业一笔一划的补完了
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem13">
+    <div class="poem-title">繁星</div>
+    <div class="poem-author">晨露小队</div>
+    <div class="poem-content">
+    天上的繁星眨着眼睛
+    就像萤火虫，
+    为赶路的人指引方向。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem14">
+    <div class="poem-title">蓝天</div>
+    <div class="poem-author"></div>
+    <div class="poem-content">
+    蓝天
+    神秘又充满力量
+    好似一位天使
+    在天空中飞翔
+    似一束光
+    照亮美丽的大地
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem15">
+    <div class="poem-title">白桦</div>
+    <div class="poem-author">郭芷源</div>
+    <div class="poem-content">
+    你那挺直的树干
+    像军人的背影
+    挺立在雨雾中
+    为我们保驾护航。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem16">
+    <div class="poem-title">繁星</div>
+    <div class="poem-author">晨露小队</div>
+    <div class="poem-content">
+    星星对我们眨眼，
+    月亮对我们微笑，
+    我在母亲的怀中，
+    静静的  睡着了。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem17">
+    <div class="poem-title">雨铃铛</div>
+    <div class="poem-author"></div>
+    <div class="poem-content">
+    沙沙响，沙沙响
+    春雨洒在屋檐上
+    屋檐上挂水珠
+    好像串串小铃铛。
+    
+    丁零当啷
+    丁铃铛啷
+    他在招呼小燕子，
+    快快回来盖新房。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem18">
+    <div class="poem-title">灯</div>
+    <div class="poem-author"></div>
+    <div class="poem-content">
+    你给了大家光明，
+    可你，
+    熄灭了。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem19">
+    <div class="poem-title">秋天</div>
+    <div class="poem-author"></div>
+    <div class="poem-content">
+    宛如一个亭亭玉立的姑娘
+    悄悄地走来，
+    带来落叶，带来无数的叹息。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem20">
+    <div class="poem-title">和平的雪花</div>
+    <div class="poem-author">郭芷源</div>
+    <div class="poem-content">
+    你那一双雪白的翅膀，
+    变成了一片片雪花
+    飞到世界各地。
+    
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem21">
+    <div class="poem-title">太阳</div>
+    <div class="poem-author">许俊彦</div>
+    <div class="poem-content">
+    你那金黄的笑脸，
+    给了无数人温暖。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem22">
+    <div class="poem-title">五颗星的重量</div>
+    <div class="poem-author">盛林芸</div>
+    <div class="poem-content">
+    五个毛球挤在一起，
+    黄白棕的绒毛拧成一团。
+    乞丐还记着没做完的梦，
+    粉粉的小嘴比初开的桃花还要软。
+    
+    细软的带着奶香的声音，
+    从那稚嫩的小嘴中流出。
+    毛茸茸的毛发，
+    比缎子还要顺滑。
+    
+    我捧起他们，
+    宛如捧起一颗颗昨夜刚摘下的星子。
+    连呼吸也放轻，
+    怕碰碎这满手的星光。
+    </div>
+  </div>
+
+  <div class="poem-item" id="poem23">
+    <div class="poem-title">秋天的落叶</div>
+    <div class="poem-author"></div>
+    <div class="poem-content">
+    你那微小的身体落地，
+    秋天便带来丰收的果实，
+    送给各家各户。
+    </div>
+  </div>
+ 
+<div class="poem-item" id="poem24">
+    <div class="poem-title">小草</div>
+    <div class="poem-author">晨露小队</div>
+    <div class="poem-content">
+    你那微小的身体一钻出地面，
+    春天就来了，
+    更多的生命也就来了。
+    </div>
+  </div>
+     
+  <div class="poem-item" id="poem25">
+    <div class="poem-title">火焰</div>
+    <div class="poem-author"></div>
+    <div class="poem-content">
+    你用你那跳动的身体，
+    在黑暗中给了无数人温暖和光明，
+    让无数人明确了方向。
+    </div>
+  </div>
+  
+  <div class="poem-item" id="poem26">
+    <div class="poem-title">校门口的树</div>
+    <div class="poem-author"></div>
+    <div class="poem-content">
+校门口那棵老树
+陪着我们朝朝暮暮
+春天发芽 夏天浓绿
+秋天落叶 冬天安静伫立
+它见过奔跑和欢呼
+听过朗读与祝福
+一年一年 守护如初
+像时光写下的温柔诗赋
+    </div>
+  </div>
+
+</div>
+<script>
+  const btnList = document.querySelectorAll('.poem-btn');
+  const poemList = document.querySelectorAll('.poem-item');
+  
+  btnList.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.target;
+      btnList.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      poemList.forEach(p => p.classList.remove('active'));
+      document.getElementById(targetId).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
